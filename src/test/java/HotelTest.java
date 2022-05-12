@@ -90,4 +90,14 @@ public class HotelTest {
         assertEquals(true , codeClanTower.getHotelDiningRooms().containsKey("Eatery"));
     }
 
+    @Test
+    public void canCheckForVacancies(){
+        codeClanTower.addBedroom(bedroom1);
+        codeClanTower.addBedroom(bedroom2);
+        codeClanTower.addBedroom(bedroom3);
+        codeClanTower.getHotelRooms().get(0);
+        codeClanTower.bookRoom(bedroom1, 2);
+        assertEquals(0, codeClanTower.vacancies());
+    }
+
     }
