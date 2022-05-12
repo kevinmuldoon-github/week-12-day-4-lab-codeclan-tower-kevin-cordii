@@ -19,4 +19,8 @@ public class Booking {
     public int getNumberOfNights() {
         return numberOfNights;
     }
+
+    public double calculateBill(){
+        return this.bedroom.getRoomRate() * this.numberOfNights;
+    }
 }

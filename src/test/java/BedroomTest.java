@@ -16,7 +16,7 @@ public class BedroomTest {
     public void before(){
         guest1 = new Guest("Max Ping Pong");
         guest2 = new Guest("Sofia Sing Song");
-        bedroom1 = new Bedroom(RoomType.DOUBLE.getRoomValue(), RoomType.DOUBLE,204 );
+        bedroom1 = new Bedroom(RoomType.DOUBLE.getRoomValue(), RoomType.DOUBLE,204 , 300);
     }
 
     @Test
@@ -44,6 +44,11 @@ public class BedroomTest {
         bedroom1.addGuest(guest1);
         bedroom1.addGuest(guest2);
         assertEquals(2, bedroom1.guestListSize());
+    }
+
+    @Test
+    public void hasRoomRate(){
+        assertEquals(300, bedroom1.getRoomRate(), 0.0);
     }
 
 }

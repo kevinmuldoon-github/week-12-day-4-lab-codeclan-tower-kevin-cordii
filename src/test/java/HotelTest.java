@@ -27,9 +27,9 @@ public class HotelTest {
         codeClanTower = new Hotel();
         guest1 = new Guest("Max Ping Pong");
         guest2 = new Guest("Sofia Sing Song");
-        bedroom1 = new Bedroom(RoomType.DOUBLE.getRoomValue(), RoomType.DOUBLE,204 );
-        bedroom2 = new Bedroom(RoomType.SINGLE.getRoomValue(), RoomType.DOUBLE,204 );
-        bedroom3 = new Bedroom(RoomType.SUITE.getRoomValue(), RoomType.DOUBLE,204 );
+        bedroom1 = new Bedroom(RoomType.DOUBLE.getRoomValue(), RoomType.DOUBLE,204 , 200);
+        bedroom2 = new Bedroom(RoomType.SINGLE.getRoomValue(), RoomType.DOUBLE,204 , 200);
+        bedroom3 = new Bedroom(RoomType.SUITE.getRoomValue(), RoomType.DOUBLE,204, 200 );
         lovelace = new ConferenceRoom(20, "Lovelace", 300);
         mikeritchie = new ConferenceRoom(15, "Mike Ritchie", 200);
     }
