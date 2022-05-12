@@ -1,5 +1,3 @@
-package com.codeclan.example;
-
 import hotel.bookings.Booking;
 import hotel.room.Bedroom;
 import hotel.room.RoomType;

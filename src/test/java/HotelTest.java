@@ -3,6 +3,7 @@ import hotel.bookings.Booking;
 import hotel.guest.Guest;
 import hotel.room.Bedroom;
 import hotel.room.ConferenceRoom;
+import hotel.room.DiningRoom;
 import hotel.room.RoomType;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,6 +21,7 @@ public class HotelTest {
     private Bedroom bedroom3;
     private ConferenceRoom lovelace;
     private ConferenceRoom mikeritchie;
+    private DiningRoom diningRoom;
 
 
     @Before
@@ -32,6 +34,7 @@ public class HotelTest {
         bedroom3 = new Bedroom(RoomType.SUITE.getRoomValue(), RoomType.DOUBLE,204, 200 );
         lovelace = new ConferenceRoom(20, "Lovelace", 300);
         mikeritchie = new ConferenceRoom(15, "Mike Ritchie", 200);
+        diningRoom = new DiningRoom(20, "Eatery");
     }
 
     @Test
@@ -79,6 +82,12 @@ public class HotelTest {
         Booking newBooking = codeClanTower.bookRoom(bedroom1, 2);
         assertEquals(bedroom1, newBooking.getBedroom());
         assertEquals(2, newBooking.getNumberOfNights());
+    }
+
+    @Test
+    public void canAddDiningRoom(){
+        codeClanTower.addDiningRoomToHotel(diningRoom);
+        assertEquals(true , codeClanTower.getHotelDiningRooms().containsKey("Eatery"));
     }
 
     }
