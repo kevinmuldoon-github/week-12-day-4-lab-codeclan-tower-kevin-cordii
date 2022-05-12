@@ -1,4 +1,5 @@
 import hotel.Hotel;
+import hotel.bookings.Booking;
 import hotel.guest.Guest;
 import hotel.room.Bedroom;
 import hotel.room.ConferenceRoom;
@@ -38,13 +39,13 @@ public class HotelTest {
         codeClanTower.addBedroom(bedroom1);
         codeClanTower.addBedroom(bedroom2);
         codeClanTower.addBedroom(bedroom3);
-        assertEquals(3, codeClanTower.numerOfHotelRooms());
+        assertEquals(3, codeClanTower.numberOfHotelRooms());
         }
 
     @Test
     public void canAddConferenceRoom(){
         codeClanTower.addConferenceRoom(lovelace, mikeritchie);
-        assertEquals(2, codeClanTower.numerOfConferenceRooms());
+        assertEquals(2, codeClanTower.numberOfConferenceRooms());
         }
 
     @Test
@@ -71,6 +72,13 @@ public class HotelTest {
         codeClanTower.addGuestToRoom(guest1, lovelace);
         codeClanTower.removeGuestFromRoom(guest1, lovelace);
         assertEquals(0, lovelace.guestListSize());
+    }
+
+    @Test
+    public void canBookRoom(){
+        Booking newBooking = codeClanTower.bookRoom(bedroom1, 2);
+        assertEquals(bedroom1, newBooking.getBedroom());
+        assertEquals(2, newBooking.getNumberOfNights());
     }
 
     }

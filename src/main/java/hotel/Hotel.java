@@ -1,5 +1,6 @@
 package hotel;
 
+import hotel.bookings.Booking;
 import hotel.guest.Guest;
 import hotel.room.Bedroom;
 import hotel.room.ConferenceRoom;
@@ -26,7 +27,7 @@ public class Hotel {
         return hotelConferenceRooms;
     }
 
-    public int numerOfHotelRooms(){
+    public int numberOfHotelRooms(){
         return hotelRooms.size();
     }
 
@@ -35,7 +36,7 @@ public class Hotel {
     }
 
 
-    public int numerOfConferenceRooms(){
+    public int numberOfConferenceRooms(){
         return hotelConferenceRooms.length;
     }
 
@@ -52,5 +53,7 @@ public class Hotel {
         room.removeGuest(guest);
     }
 
-
+    public Booking bookRoom(Bedroom bedroom, int numberOfNights){
+        return new Booking(bedroom, numberOfNights);
+    }
 }

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CodeClanTower" />
+        <module name="week-12-day-4-lab-codeclan-tower-kevin-cordii" />
       </profile>
     </annotationProcessing>
   </component>
